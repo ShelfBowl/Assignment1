@@ -128,3 +128,15 @@ h1, h2, h3, h5 {
     text-align: center;
 }
 
+@media (max-width: 600px) {
+
+    nav {
+        justify-content: center;
+    }
+
+    button {
+        font-size: 75%;
+        padding: 0 5px;
+    }
+
+}
