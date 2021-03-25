@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap');
+
+body{
+    background-color: #f2e9de;
+    color: #dddddd;
+    font-family:Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-areas:
+        'section body body body body'
+        'section body body body body';
+
+}
+
+.right {
+    text-align: center;
+    grid-area: body;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-areas: 
+        'header'
+        'main'
+        'footer';
+}
+
+header{
+    grid-area: header;
+}
+
+nav {
+    display: flex;
+    justify-content: right;
+}
+
+nav a {
+    padding-right: 20px;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+section {
+    min-height: calc(90vh - 100px);
+    background-color: #faf4ed;
+    padding-top: 20px;
+    grid-area: section;
+    position: relative;
+    margin-left: -10px;
+    margin-top: -10px;
+
+}
+
+main{
+    grid-area: main;
+}
+
+.topButtons {
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 3px solid #56949f;
+    background-color: #faf4ed;
+    resize: none;
+}
+
+.bottomButtons {
+    display: flex;
+    justify-content: right;
+}
+
+.bottomButtons button {
+    margin-left: 20px;
+}
+
+button {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.button {
+    background-color: #575279;
+}
+
+.button:hover {
+    background-color: #6e6a86;
+}
+
+.cancelButton {
+    background-color: #ff0000;
+}
+
+.cancelButton:hover {
+    background-color: #dd0000;
+}
+
+#theme {
+    margin-left: 20px;
+}
+
+.wrapper {
+    min-height: calc(90vh - 100px);
+}
+
+footer {
+    grid-area: footer;
+    height: 130px;
+}
+
+
+h1, h2, h3, h5, li {
+    color: #286983;
+    font-family: 'Lexend', sans-serif;
+}
+
+h1, h2, h3, h5 {
+    text-align: center;
+}
+
