@@ -7,7 +7,7 @@ var notesArray = [
     }
 ];
 
-var isLight = true
+var isLight = true;
 
 function themeSwitcher(event) {
     if (isLight == true) {
@@ -21,22 +21,28 @@ function themeSwitcher(event) {
     }
 
 }
- 
-function lightTheme(event) {
 
+function cancelNote(event) {
+    document.getElementById("noteTextArea").style.visibility = "hidden";
+    document.getElementById("save").style.visibility = "hidden";
+    document.getElementById("cancel").style.visibility = "hidden";
 }
 
 function newNote(event) {
-
+    document.getElementById("noteTextArea").style.visibility = "visible";
+    document.getElementById("noteTextArea").value = "";
+    document.getElementById("save").style.visibility = "visible";
+    document.getElementById("cancel").style.visibility = "visible";
 }
 
 function saveNote(event) {
-
+    titleInput = prompt("Please enter a title", "Note " + (notesArray.length+1));
+    bodyInput = document.getElementById("noteTextArea").value;
+    notesArray.push({title: titleInput, body: bodyInput});
+    document.getElementById("noteTitles").innerHTML += `<li>${titleInput}</li>`;
 }
 
-function titleAlert(event) {
 
-}
 
 function displayNote(event) {
 

@@ -15,9 +15,9 @@
 
         <h2>My Notes</h2>
 
-        <ul>
-            <li>note one</li>
-            <li>note two</li>
+        <ul id="noteTitles">
+            <li></li>
+            <li></li>
         </ul>
 
     </section>
@@ -41,7 +41,7 @@
 
             <main>
                 <div class="topButtons">
-                    <button class="button" type="button">New Note</button>
+                    <button id="newNote" class="button" type="button" onclick="newNote(event)">New Note</button>
                     <button id="theme" class="button" type="button" onclick="themeSwitcher(event)">Dark Theme</button>
                 </div>
 
@@ -50,8 +50,8 @@
                 </div>
 
                 <div class="bottomButtons">
-                    <button class="button" type="button">Save</button>
-                    <button class="cancelButton" type="button">Cancel</button>
+                    <button id="save" class="button" type="button" onclick="saveNote(event)">Save</button>
+                    <button id="cancel" class="cancelButton" type="button" onclick="cancelNote(event)">Cancel</button>
                 </div>
             </main>
         </div>
