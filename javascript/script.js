@@ -7,8 +7,18 @@ var notesArray = [
     }
 ];
 
+var isLight = true
 
-function darkTheme(event) {
+function themeSwitcher(event) {
+    if (isLight == true) {
+        document.body.setAttribute('data-theme', 'dark');
+        isLight = false;
+        document.getElementById("theme").innerHTML = "Light Theme";
+    } else {
+        document.body.setAttribute('data-theme', 'light');
+        isLight = true;
+        document.getElementById("theme").innerHTML = "Dark Theme";
+    }
 
 }
  

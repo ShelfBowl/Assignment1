@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap');
 
 body{
-    background-color: #f2e9de;
+    background-color: var(--background);
     color: #dddddd;
     font-family:Arial, Helvetica, sans-serif;
     display: grid;
@@ -9,6 +9,26 @@ body{
         'section body body body body'
         'section body body body body';
     word-spacing: 10px;
+}
+
+body[data-theme="light"] {
+    --background: #f2e9de;
+    --section-background: #faf4ed;
+    --header: #286983;
+    --button: #575279;
+    --button-hover: #6e6a86;
+    --textborder: #56949f;
+    --textboxtext: #000;
+}
+
+body[data-theme="dark"] {
+    --background: #393552;
+    --section-background: #232136;
+    --header: #e0def4;
+    --button: #575279;
+    --button-hover: #817c9c;
+    --textborder: #9ccfd8;
+    --textboxtext: #fff;
 }
 
 .right {
@@ -39,7 +59,7 @@ nav a {
 
 section {
     min-height: calc(90vh - 100px);
-    background-color: #faf4ed;
+    background-color: var(--section-background);
     padding-top: 20px;
     grid-area: section;
     position: relative;
@@ -65,9 +85,10 @@ textarea {
     margin-bottom: 20px;
     line-height: 1.5;
     border-radius: 5px;
-    border: 3px solid #56949f;
-    background-color: #faf4ed;
+    border: 3px solid var(--textborder);
+    background-color: var(--section-background);
     resize: none;
+    color: var(--textboxtext);
 }
 
 .bottomButtons {
@@ -90,11 +111,11 @@ button {
 }
 
 .button {
-    background-color: #575279;
+    background-color: var(--button);
 }
 
 .button:hover {
-    background-color: #6e6a86;
+    background-color: var(--button-hover);
 }
 
 .cancelButton {
@@ -120,7 +141,7 @@ footer {
 
 
 h1, h2, h3, h5, li {
-    color: #286983;
+    color: var(--header);
     font-family: 'Lexend', sans-serif;
 }
 
