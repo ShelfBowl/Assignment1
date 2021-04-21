@@ -2,7 +2,7 @@
 
 var notesArray = [
     {
-        title: "Example Note",
+        title: "Example Notes",
         body: "This is an example"
     }
 ];
@@ -36,15 +36,26 @@ function newNote(event) {
 }
 
 function saveNote(event) {
-    titleInput = prompt("Please enter a title", "Note " + (notesArray.length+1));
-    bodyInput = document.getElementById("noteTextArea").value;
+    let titleInput = prompt("Please enter a title", "Note " + (notesArray.length+1));
+    let bodyInput = document.getElementById("noteTextArea").value;
+    document.getElementById("noteTextArea").value = "";
     notesArray.push({title: titleInput, body: bodyInput});
-    document.getElementById("noteTitles").innerHTML += `<li>${titleInput}</li>`;
+    document.getElementById("noteTitles").innerHTML += `<li id="${titleInput}" onclick="displayNote(event)">${titleInput}</li>`;
+    
 }
 
 
 
 function displayNote(event) {
+    let titleGet = event.target.id;
+    
+    console.log(event.target.id)
 
+    for (let i in notesArray) {
+        if (titleGet == notesArray[i].title) {
+            console.log(titleGet)
+            document.getElementById("noteTextArea").value = notesArray[i].body
+        }
+    }
 }
 
