@@ -7,3 +7,28 @@ var notesArray = [
     }
 ];
 
+
+function darkTheme(event) {
+
+}
+ 
+function lightTheme(event) {
+
+}
+
+function newNote(event) {
+
+}
+
+function saveNote(event) {
+
+}
+
+function titleAlert(event) {
+
+}
+
+function displayNote(event) {
+
+}
+
